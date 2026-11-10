@@ -133,11 +133,14 @@ $env:HOMESHELL_GCC_ROOT = "C:\Dev-Cpp\msys2\ucrt64"
 
 ```text
 home/
-├── 启动终端.bat          # 双击启动
-├── 使用说明.md           # 本说明
-└── .fileshell/           # 程序文件（系统目录，不能删除）
-    ├── fileshell.py
-    └── fileshell.py
+├── 启动终端.bat          # 双击启动入口
+├── 使用说明.md           # 本文档
+└── .fileshell/           # 程序文件（系统目录，请勿随意删除）
+    ├── fileshell.py      # Python 核心主程序
+    ├── children_home_cpp/  # C++ 子系统目录
+    │   └── main.cpp / main.exe
+    └── children_home_rust/ # Rust 子系统目录
+        └── src/main.rs / main.exe
 ```
 
 `home` 是本系统的根目录，也是唯一允许操作的位置。可以在这里自由创建、
